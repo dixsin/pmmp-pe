@@ -30,10 +30,10 @@ use function is_int;
 use function str_repeat;
 
 final class VersionInfo{
-	public const NAME = "PocketMine-MP";
+	public const NAME = "PocketMine-PE";
 	public const BASE_VERSION = "5.4.0";
-	public const IS_DEVELOPMENT_BUILD = false;
-	public const BUILD_CHANNEL = "stable";
+	public const IS_DEVELOPMENT_BUILD = true;
+	public const BUILD_CHANNEL = "master";
 
 	/**
 	 * PocketMine-MP-specific version ID for world data. Used to determine what fixes need to be applied to old world
@@ -51,7 +51,7 @@ final class VersionInfo{
 	public const TAG_WORLD_DATA_VERSION = "PMMPDataVersion"; //TAG_Long
 
 	private function __construct(){
-		//NOOP
+		//NOOP hahaha :)
 	}
 
 	private static ?string $gitHash = null;
