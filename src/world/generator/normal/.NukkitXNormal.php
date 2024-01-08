@@ -1,20 +1,20 @@
 <?php
 namespace cn\nukkit\level\generator;
 
-use cn\nukkit\block\Block;
-use cn\nukkit\level\ChunkManager;
-use cn\nukkit\level\format\FullChunk;
-use cn\nukkit\level\generator\biome\Biome;
-use cn\nukkit\level\generator\biome\BiomeSelector;
-use cn\nukkit\level\generator\noise\Simplex;
-use cn\nukkit\level\generator\object\ore\OreType;
-use cn\nukkit\level\generator\populator\Populator;
-use cn\nukkit\level\generator\populator\PopulatorCaves;
-use cn\nukkit\level\generator\populator\PopulatorGroundCover;
-use cn\nukkit\level\generator\populator\PopulatorOre;
-use cn\nukkit\level\generator\populator\PopulatorRavines;
-use cn\nukkit\math\NukkitRandom;
-use cn\nukkit\math\Vector3;
+use pocketmine\block\Block;
+use pocketmine\world\ChunkManager;
+use pocketmine\world\format\FullChunk;
+use pocketmine\world\generator\biome\Biome;
+use pocketmine\world\generator\biome\BiomeSelector;
+use pocketmine\world\generator\noise\Simplex;
+use pocketmine\world\generator\object\ore\OreType;
+use pocketmine\world\generator\populator\Populator;
+use pocketmine\world\generator\populator\PopulatorCaves;
+use pocketmine\world\generator\populator\PopulatorGroundCover;
+use pocketmine\world\generator\populator\PopulatorOre;
+use pocketmine\world\generator\populator\PopulatorRavines;
+use pocketmine\math\NukkitRandom;
+use pocketmine\math\Vector3;
 use pocketmine\utils\Random;
 
 class Normal extends Generator {
