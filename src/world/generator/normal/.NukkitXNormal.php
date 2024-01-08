@@ -1,5 +1,5 @@
 <?php
-namespace use pocketmine\world\generator;
+namespace pocketmine\world\generator;
 
 use pocketmine\block\Block;
 use pocketmine\world\ChunkManager;
