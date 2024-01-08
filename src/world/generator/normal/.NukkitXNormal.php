@@ -1,5 +1,5 @@
 <?php
-namespace cn\nukkit\level\generator;
+namespace use pocketmine\world\generator;
 
 use pocketmine\block\Block;
 use pocketmine\world\ChunkManager;
