@@ -60,7 +60,8 @@ class UpdateChecker{
 		if($this->hasUpdate()){
 			(new UpdateNotifyEvent($this))->call();
 			if($this->server->getConfigGroup()->getPropertyBool("auto-updater.on-update.warn-console", true)){
-				$this->showConsoleUpdate();
+				//$this->showConsoleUpdate();
+				return true;
 			}
 		}else{
 			if(!VersionInfo::IS_DEVELOPMENT_BUILD && $this->getChannel() !== "stable"){
@@ -93,7 +94,7 @@ class UpdateChecker{
 		$messages[] = "Details: " . $this->updateInfo->details_url;
 		$messages[] = "Download: " . $this->updateInfo->download_url;
 
-		$this->printConsoleMessage($messages, \LogLevel::WARNING);
+		//$this->printConsoleMessage($messages, \LogLevel::WARNING);
 	}
 
 	protected function showChannelSuggestionStable() : void{
@@ -149,7 +150,7 @@ class UpdateChecker{
 		if($currentVersion->getBuild() > 0 && $currentVersion->compare($newVersion) > 0){
 			$this->updateInfo = $updateInfo;
 		}else{
-			$this->logger->debug("API reported version is an older version or the same version (" . $newVersion->getFullVersion() . "), not showing notification");
+			//$this->logger->debug("API reported version is an older version or the same version (" . $newVersion->getFullVersion() . "), not showing notification");
 		}
 	}
 
