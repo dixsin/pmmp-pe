@@ -798,6 +798,16 @@ class Server{
 			$this->dataPath = realpath($dataPath) . DIRECTORY_SEPARATOR;
 			$this->pluginPath = realpath($pluginPath) . DIRECTORY_SEPARATOR;
 
+			/*
+   			* @return string
+      			*/
+			$this->logger->info("§d
+██████╗░░█████╗░░█████╗░██╗░░██╗███████╗████████╗███╗░░░███╗██╗███╗░░██╗███████╗
+██╔══██╗██╔══██╗██╔══██╗██║░██╔╝██╔════╝╚══██╔══╝████╗░████║██║████╗░██║██╔════╝
+██████╔╝██║░░██║██║░░╚═╝█████═╝░█████╗░░░░░██║░░░██╔████╔██║██║██╔██╗██║█████╗░░
+██╔═══╝░██║░░██║██║░░██╗██╔═██╗░██╔══╝░░░░░██║░░░██║╚██╔╝██║██║██║╚████║██╔══╝░░
+██║░░░░░╚█████╔╝╚█████╔╝██║░╚██╗███████╗░░░██║░░░██║░╚═╝░██║██║██║░╚███║███████╗
+╚═╝░░░░░░╚════╝░░╚════╝░╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚══════╝§r");
 			$this->logger->info("Loading server configuration");
 			$pocketmineYmlPath = Path::join($this->dataPath, "pocketmine.yml");
 			if(!file_exists($pocketmineYmlPath)){
