@@ -13,7 +13,7 @@ use pocketmine\world\generator\populator\PopulatorCaves;
 use pocketmine\world\generator\populator\PopulatorGroundCover;
 use pocketmine\world\generator\populator\PopulatorOre;
 use pocketmine\world\generator\populator\PopulatorRavines;
-use pocketmine\math\NukkitRandom;
+use pocketmine\math\Random;
 use pocketmine\math\Vector3;
 use pocketmine\utils\Random;
 
