@@ -8,7 +8,7 @@
 			<img src="https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/.github/readme/pocketmine-rgb.gif" loading="eager" />
 		</picture>
 	</a><br>
-	<b>A highly customisable, open source server software for Minecraft: Bedrock Edition written in PHP (For Minecraft PE 1.1.7)</b>
+	<b>A highly customisable, open source server software for Minecraft: Pocket Edition written in PHP (For Minecraft PE 1.1.7)</b>
 </p>
 
 <p align="center">
