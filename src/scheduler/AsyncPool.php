@@ -320,14 +320,19 @@ class AsyncPool{
 	 */
 	public function shutdown() : void{
 		while($this->collectTasks()){
-			//NOOP
+			//Stoping task's
 		}
 
 		foreach($this->workers as $worker){
+			//get id number on console
+			var_dump($worker);
+			//Quit worker
 			$worker->worker->quit();
 			$this->eventLoop->removeNotifier($worker->sleeperNotifierId);
+			//Stop snooze threads
 		}
 		$this->workers = [];
+		return false;
 	}
 
 	private function checkTaskProgressUpdates(AsyncTask $task) : void{
