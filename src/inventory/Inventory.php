@@ -29,6 +29,7 @@ namespace pocketmine\inventory;
 use pocketmine\item\Item;
 use pocketmine\player\Player;
 use pocketmine\utils\ObjectSet;
+use pocketmine\item\ItemIdentifier;
 
 interface Inventory{
 	public const MAX_STACK = 64;
@@ -86,7 +87,7 @@ interface Inventory{
 	 *
 	 * @return Item[]
 	 */
-	public function addItem(Item ...$slots) : array;
+	public function addItem(Item ?$slots) : array;
 
 	/**
 	 * Checks if a given Item can be added to the inventory
@@ -196,4 +197,13 @@ interface Inventory{
 	 * @phpstan-return ObjectSet<InventoryListener>
 	 */
 	public function getListeners() : ObjectSet;
+
+    /*
+    * @return ItemIdentifier[] : mixed.
+    * TODO: In time...
+    * By AuroraTeam
+    */
+    public function firstContains(mixed $container, mixed $firstGetter) : array{
+        return $container->{$firstGetter[0]}; //Get fast getter! (Object to array in php 8.2!!!!)
+    }
 }
