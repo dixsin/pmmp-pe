@@ -52,6 +52,7 @@ abstract class Worker extends NativeWorker{
 
 	/**
 	 * Stops the thread using the best way possible. Try to stop it yourself before calling this.
+  	 * Native quit***
 	 */
 	public function quit() : void{
 		$this->isKilled = true;
@@ -62,6 +63,7 @@ abstract class Worker extends NativeWorker{
 			});
 			$this->notify();
 			$this->shutdown();
+			exit();
 		}
 
 		ThreadManager::getInstance()->remove($this);
