@@ -51,7 +51,7 @@ namespace pocketmine {
 
 	require_once __DIR__ . '/VersionInfo.php';
 
-	const MIN_PHP_VERSION = "8.1.0";
+	const MIN_PHP_VERSION = "8.2";
 
 	/**
 	 * @param string $message
